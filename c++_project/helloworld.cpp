@@ -2,22 +2,27 @@
 
 int main() {
 
-	int age;
+	char grade;
+	std::cout << "What letter grade?: ";
+	std::cin >> grade;
 
-	std::cout << "Enter your age: ";
-	std::cin >> age;
-
-	if (age >= 100) {
-		std::cout << "You are too old to enter this site!";
-	}
-	else if (age >= 18) {
-		std::cout << "Welcome to the site!";
-	}
-	else if (age < 0) {
-		std::cout << "You haven't been born yet!";
-	}
-	else {
-		std::cout << "You are not old enough to enter!";
+	switch (grade) {
+	case 'A':
+		std::cout << "You did great!";
+		break;
+	case 'B':
+		std::cout << "You did good!";
+		break;
+	case 'C':
+		std::cout << "You did okay!";
+		break;
+	case 'D':
+		std::cout << "You did not do good!";
+		break;
+	case 'F':
+		std::cout << "You Failed!";
+	default:
+		std::cout << "Please only enter in a letter grade (A-F)";
 	}
 
 	return 0;
