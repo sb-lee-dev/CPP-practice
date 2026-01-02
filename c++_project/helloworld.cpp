@@ -3,25 +3,17 @@
 
 int main() {
 
-	int students = 20;
-	//students = students + 2;
-	//students+=1;
-	//students++;
+	//double x = (int) 3.14;
+	//std::cout << x;
 
-	//students = students - 1;
-	//students -= 1;
-	//students--;
+	//char x = 100;
+	//std::cout << (char) 100;
 
-	//students = students * 2;
-	//students *= 2;
+	int correct = 8;
+	int questions = 10;
+	double score = correct / (double)questions * 100;
 
-	//students = students / 2;
-	//students /= 3;
-
-	int remainder = students % 3;
-
-	int calc = 6 - (5 + 4) * 3 / 2;
-	std::cout << calc;
+	std::cout << score << "%";
 
 	return 0;
 }
