@@ -2,25 +2,34 @@
 
 int main() {
 
-	int temp;
-	bool sunny = true;
+	double temp;
+	char unit;
 
-	std::cout << "Enter the temperature: ";
-	std::cin >> temp;
+	std::cout << "****** Temperature conversion ******\n";
+	std::cout << "F\n";
+	std::cout << "C\n";
+	std::cout << "What unit would you like to convert to: ";
+	std::cin >> unit;
 
-	if (temp <= 0 || temp >= 30) {
-		std::cout << "The temperature is bad!\n";
+	if(unit == 'F' || unit == 'f') {
+		std::cout << "Enter the temperature in C: ";
+		std::cin >> temp;
+
+		temp = (1.8 * temp) + 32.0;
+		std::cout << "Temperature is: " << temp << "F\n";
+	} 
+	else if (unit == 'C' || unit == 'c') {
+		std::cout << "Enter the temperature in F: ";
+		std::cin >> temp;
+
+		temp = (temp - 32) / 1.8;
+		std::cout << "Temperature is: " << temp << "C\n";
 	}
 	else {
-		std::cout << "The temperature is good!\n";
+		std::cout << "Please enter in only C or F\n";
 	}
 
-	if (!sunny) {
-		std::cout << "It is sunny outside!";
-	}
-	else {
-		std::cout << "It is cloudy outside!";
-	}
+	std::cout << "************************************";
 
 	return 0;
 }
