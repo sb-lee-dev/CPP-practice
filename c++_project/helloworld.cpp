@@ -2,43 +2,15 @@
 
 int main() {
 
-	char op;
-	double num1;
-	double num2;
-	double result;
+	//int grade = 50;
+	//grade >= 60 ? std::cout << "You pass!" : std::cout << "You fail!";
 
-	std::cout << "************ CALCULATOR ************\n";
+	//int number = 9;
+	//number % 2 ? std::cout << "ODD" : std::cout << "EVEN";
 
-	std::cout << "Enter either (+ - * /): ";
-	std::cin >> op;
-
-	std::cout << "Enter #1: ";
-	std::cin >> num1;
-
-	std::cout << "Enter #2: ";
-	std::cin >> num2;
-
-	switch (op) {
-	case '+':
-		result = num1 + num2;
-		break;
-	case '-':
-		result = num1 - num2;
-		break;
-	case '*':
-		result = num1 * num2;
-		break;
-	case '/':
-		result = num1 / num2;
-		break;
-	default: 
-		std::cout << "That wasn't a valid response\n";
-		break;
-	}
-
-	std::cout << "The reuslt is " << result << '\n';
-
-	std::cout << "************************************\n";
+	bool hungry = true;
+	//hungry ? std::cout << "you are hungry" : std::cout << "you are full";
+	std::cout << (hungry ? "You are hungry" : "You are full");
 
 	return 0;
 }
