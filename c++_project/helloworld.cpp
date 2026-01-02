@@ -2,15 +2,25 @@
 
 int main() {
 
-	//int grade = 50;
-	//grade >= 60 ? std::cout << "You pass!" : std::cout << "You fail!";
+	int temp;
+	bool sunny = true;
 
-	//int number = 9;
-	//number % 2 ? std::cout << "ODD" : std::cout << "EVEN";
+	std::cout << "Enter the temperature: ";
+	std::cin >> temp;
 
-	bool hungry = true;
-	//hungry ? std::cout << "you are hungry" : std::cout << "you are full";
-	std::cout << (hungry ? "You are hungry" : "You are full");
+	if (temp <= 0 || temp >= 30) {
+		std::cout << "The temperature is bad!\n";
+	}
+	else {
+		std::cout << "The temperature is good!\n";
+	}
+
+	if (!sunny) {
+		std::cout << "It is sunny outside!";
+	}
+	else {
+		std::cout << "It is cloudy outside!";
+	}
 
 	return 0;
 }
