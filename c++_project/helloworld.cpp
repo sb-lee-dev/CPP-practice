@@ -1,19 +1,20 @@
 #include <iostream>
 #include <vector>
+#include <string>
 
 int main() {
 
-	//double x = (int) 3.14;
-	//std::cout << x;
+	std::string name;
+	int age;
 
-	//char x = 100;
-	//std::cout << (char) 100;
+	std::cout << "What's your age?: ";
+	std::cin >> age;
 
-	int correct = 8;
-	int questions = 10;
-	double score = correct / (double)questions * 100;
+	std::cout << "What's your full name?: ";
+	std::getline(std::cin >> std::ws, name);
 
-	std::cout << score << "%";
+	std::cout << "Hello " << name << '\n';
+	std::cout << "You are " << age << " years old";
 
 	return 0;
 }
