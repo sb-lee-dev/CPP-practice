@@ -1,20 +1,24 @@
 #include <iostream>
-#include <cmath>
 
 int main() {
 
-	double a;
-	double b;
-	double c;
+	int age;
 
-	std::cout << "Enter side A: ";
-	std::cin >> a;
+	std::cout << "Enter your age: ";
+	std::cin >> age;
 
-	std::cout << "Enter side B: ";
-	std::cin >> b;
+	if (age >= 100) {
+		std::cout << "You are too old to enter this site!";
+	}
+	else if (age >= 18) {
+		std::cout << "Welcome to the site!";
+	}
+	else if (age < 0) {
+		std::cout << "You haven't been born yet!";
+	}
+	else {
+		std::cout << "You are not old enough to enter!";
+	}
 
-	c = sqrt(pow(a, 2) + pow(b, 2));
-
-	std::cout << "side C: " << c;
 	return 0;
 }
