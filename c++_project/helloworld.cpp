@@ -1,16 +1,20 @@
 #include <iostream>
+#include <vector>
 
-namespace first {
-	int x = 1;
-}
-namespace second {
-	int x = 2;
-}
+//typedef std::vector<std::pair<std::string, int>> pairlist_t;
+//typedef std::string text_t;
+//typedef int number_t;
+
+using text_t = std::string;
+using number_t = int;
 
 int main() {
-	using namespace second;
 
-	std::cout << x;
+	text_t firstName = "Bro";
+	number_t age = 21;
+
+	std::cout << firstName << "\n";
+	std::cout << age << "\n";
 
 	return 0;
 }
