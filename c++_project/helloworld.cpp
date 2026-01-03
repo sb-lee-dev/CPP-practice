@@ -1,27 +1,18 @@
 #include <iostream>
 #include <string>
+#include <ctime>
 
 int main() {
 
-	int rows;
-	int cols;
-	char sb;
+	srand(time(NULL));
 
-	std::cout << "How mnay rows?: ";
-	std::cin >> rows;
+	int num1 = (rand() % 6) + 1;
+	int num2 = (rand() % 6) + 1;
+	int num3 = (rand() % 6) + 1;
 
-	std::cout << "How mnay columns?: ";
-	std::cin >> cols;
-
-	std::cout << "Enter a symbol to use: ";
-	std::cin >> sb;
-
-	for (int i = 1; i <= rows; i++) {
-		for (int j = 1; j <= cols; j++) {
-			std::cout << sb;
-		}
-		std::cout << '\n';
-	}
+	std::cout << num1 << '\n';
+	std::cout << num2 << '\n';
+	std::cout << num3 << '\n';
 	
 	return 0;
 }
