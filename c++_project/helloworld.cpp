@@ -3,14 +3,11 @@
 
 int main() {
 
-	int number;
+	for (int i = 1; i <= 10; i += 2) {
+		std::cout << i << '\n';
+	}
 
-	do {
-		std::cout << "Enter a positive number: ";
-		std::cin >> number;
-	} while (number < 0);
-
-	std::cout << "The number is: " << number;
+	std::cout << "HAPPY NEW YEAR!\n";
 
 	return 0;
 }
