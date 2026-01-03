@@ -5,11 +5,16 @@
 
 int main() {
 	
-	//std::string students[] = { "Spongebab", "Patrick", "Squidward", "Sandy" };
-	char grades[] = { 'A', 'B', 'C', 'D', 'F' };
+	std::string students[] = { "Spongebab", "Patrick", "Squidward", "Sandy" };
+	int grades[] = { 65,72,81,93 };
 
-	for (int i = 0; i < sizeof(grades) / sizeof(char); i++) {
-		std::cout << grades[i] << '\n';
+
+	/*for (std::string student: students) {
+		std::cout << student << '\n';
+	}*/
+
+	for (int grade : grades) {
+		std::cout << grade << '\n';
 	}
 
 	return 0;
