@@ -1,19 +1,31 @@
 #include <iostream>
 #include <string>
-#include <ctime>
 
-void happyBirthday(std::string, int);
+double square(double length);
+double cube(double length);
+std::string concatStrings(std::string string1, std::string string2);
 
 int main() {
 
-	std::string name = "Bro";
-	int age = 21;
-	happyBirthday(name, age); //argumnet
+	double length = 5.0;
+	//std::cout << square(length) << '\n';
+	//std::cout << cube(length) << '\n';
+
+	std::string firstname = "Bro";
+	std::string lastname = "Code";
 	
+	std::cout << concatStrings(firstname, lastname);
 	return 0;
 }
 
-void happyBirthday(std::string name, int age) { //parameter
-	std::cout << "Happy birthday to " << name << '\n';
-	std::cout << "You are " << age << " years old" << '\n';
+double square(double length) {
+	return length * length;
+}
+
+double cube(double length) {
+	return pow(length, 3);
+}
+
+std::string concatStrings(std::string string1, std::string string2) {
+	return string1 + " " + string2;
 }
