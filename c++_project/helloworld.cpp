@@ -3,35 +3,18 @@
 #include <limits>
 #include <ctime>
 
-void sort(int array[], int size);
-
-
 int main() {
+	const int SIZE = 99;
+	std::string foods[SIZE];
+	fill(foods, foods + (SIZE/3), "pizza");
+	fill(foods + (SIZE / 3), foods + (2 * SIZE / 3), "hamburgers");
+	fill(foods + (2 * SIZE / 3), foods + SIZE, "sushi");
+
+	for (std::string food : foods) {
+		std::cout << food << '\n';
+	}
 	
-	int array[] = { 10, 1, 9, 2, 8, 3, 7, 4, 6, 5 };
-	int size = sizeof(array) / sizeof(array[0]);
-
-	sort(array, size);
-
-	for (int element : array) {
-		std::cout << element << " ";
-	}
-
 	return 0;
-}
-
-void sort(int array[], int size) {
-	int temp;
-
-	for (int i = 0; i < size - 1; i++) {
-		for (int j = i + 1; j < size; j++) {
-			if (array[i] > array[j]) {
-				temp = array[i];
-				array[i] = array[j];
-				array[j] = temp;
-			}
-		}
-	}
 }
 
 
