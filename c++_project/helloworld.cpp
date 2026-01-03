@@ -5,18 +5,18 @@
 
 int main() {
 
-	std::string name = "Bro";
-	int age = 21;
-	std::string freePizzas[5] = { "pizza1","pizza2","pizza3","pizza4","pizza5" };
+	int* pointer = nullptr;
+	int x = 123;
 
-	std::string* pName = &name;
-	int* pAge = &age;
-	std::string* pFreePizzas = freePizzas;
+	pointer = &x;
 
-	std::cout << *pName << '\n';
-	std::cout << *pAge << '\n';
-	//std::cout << freePizzas << '\n';
-	std::cout << *pFreePizzas << '\n';
+	if (pointer == nullptr) {
+		std::cout << "address was not assigned!\n";
+	}
+	else {
+		std::cout << "address was assigend!\n";
+		std::cout << *pointer;
+	}
 
 	return 0;
 }
