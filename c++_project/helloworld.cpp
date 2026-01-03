@@ -3,17 +3,32 @@
 #include <limits>
 #include <ctime>
 
+void swap(std::string &x, std::string &y);
+
 int main() {
 	
-	std::string name = "Bro";
-	int age = 21;
-	bool student = true;
+	std::string x = "Kool-Aid";
+	std::string y = "Water";
+	std::string temp;
 
-	std::cout << &name << '\n';
-	std::cout << &age << '\n';
-	std::cout << &student << '\n';
+	/*temp = x;
+	x = y;
+	y = temp;*/
+
+	swap(x, y);
+
+	std::cout << "X: " << x << '\n';
+	std::cout << "Y: " << y << '\n';
 
 	return 0;
+}
+
+void swap(std::string &x, std::string &y) {
+	std::string temp;
+
+	temp = x;
+	x = y;
+	y = temp;
 }
 
 
