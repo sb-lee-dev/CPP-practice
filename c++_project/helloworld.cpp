@@ -1,31 +1,26 @@
 #include <iostream>
 #include <string>
 
-double square(double length);
-double cube(double length);
-std::string concatStrings(std::string string1, std::string string2);
+void bakePizza();
+void bakePizza(std::string topping1);
+void bakePizza(std::string topping1, std::string topping2);
 
 int main() {
-
-	double length = 5.0;
-	//std::cout << square(length) << '\n';
-	//std::cout << cube(length) << '\n';
-
-	std::string firstname = "Bro";
-	std::string lastname = "Code";
+	bakePizza("pepperoni", "mushrooms");
 	
-	std::cout << concatStrings(firstname, lastname);
 	return 0;
 }
 
-double square(double length) {
-	return length * length;
+void bakePizza() {
+	std::cout << "Here is your pizza!\n";
 }
 
-double cube(double length) {
-	return pow(length, 3);
+void bakePizza(std::string topping1) {
+	std::cout << "Here is your " << topping1 << " pizza!\n";
 }
 
-std::string concatStrings(std::string string1, std::string string2) {
-	return string1 + " " + string2;
+void bakePizza(std::string topping1, std::string topping2) {
+	std::cout << "Here is your " << topping1 << " and " << topping2 << " pizza!\n";
 }
+
+
