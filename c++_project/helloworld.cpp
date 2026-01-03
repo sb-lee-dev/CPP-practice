@@ -5,14 +5,25 @@
 int main() {
 
 	srand(time(NULL));
+	int randNum = rand() % 5 + 1;
 
-	int num1 = (rand() % 6) + 1;
-	int num2 = (rand() % 6) + 1;
-	int num3 = (rand() % 6) + 1;
-
-	std::cout << num1 << '\n';
-	std::cout << num2 << '\n';
-	std::cout << num3 << '\n';
+	switch (randNum) {
+	case 1:
+		std::cout << "You win a bumper sticker!\n";
+		break;
+	case 2:
+		std::cout << "You win a t-short!\n";
+		break;
+	case 3:
+		std::cout << "You win a free lunch!\n";
+		break;
+	case 4:
+		std::cout << "You win a gift card!\n";
+		break;
+	case 5:
+		std::cout << "You win a concert tickets!\n";
+		break;
+	}
 	
 	return 0;
 }
