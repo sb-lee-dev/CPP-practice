@@ -3,21 +3,27 @@
 #include <limits>
 #include <ctime>
 
+double getTotal(double[], int);
+
 int main() {
 	
-	std::string students[] = { "Spongebab", "Patrick", "Squidward", "Sandy" };
-	int grades[] = { 65,72,81,93 };
+	double prices[] = { 49.99, 15.05, 75, 9.99 };
+	int size = sizeof(prices) / sizeof(prices[0]);
+	double total = getTotal(prices, size);
 
-
-	/*for (std::string student: students) {
-		std::cout << student << '\n';
-	}*/
-
-	for (int grade : grades) {
-		std::cout << grade << '\n';
-	}
+	std::cout << total << '\n';
 
 	return 0;
+}
+
+double getTotal(double prices[], int size) {
+	double sum = 0;
+
+	for (int i = 0; i < size; i++) {
+		sum += prices[i];
+	}
+
+	return sum;
 }
 
 
