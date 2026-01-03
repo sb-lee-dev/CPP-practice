@@ -3,28 +3,40 @@
 #include <limits>
 #include <ctime>
 
-double getTotal(double[], int);
+int searchArray(std::string array[], int size, std::string element);
 
 int main() {
 	
-	double prices[] = { 49.99, 15.05, 75, 9.99 };
-	int size = sizeof(prices) / sizeof(prices[0]);
-	double total = getTotal(prices, size);
+	//int numbers[] = { 1,2,3,4,5,6,7,8,9,10 };
+	std::string foods[] = {"pizza", "hamburger", "hotdog"};
+	int size = sizeof(foods) / sizeof(std::string);
+	int index;
+	std::string myFood;
 
-	std::cout << total << '\n';
+	std::cout << "Enter element to search for: " << '\n';
+	std::getline(std::cin, myFood);
+
+	index = searchArray(foods, size, myFood);
+
+	if (index != -1) {
+		std::cout << myFood << " is at index " << index;
+	}
+	else {
+		std::cout << myFood << " is not in the array";
+	}
 
 	return 0;
 }
 
-double getTotal(double prices[], int size) {
-	double sum = 0;
+int searchArray(std::string array[], int size, std::string element) {
 
 	for (int i = 0; i < size; i++) {
-		sum += prices[i];
+		if (array[i] == element) {
+			return i;
+		}
 	}
 
-	return sum;
+	return -1;
 }
-
 
 
