@@ -3,50 +3,34 @@
 #include <limits>
 #include <ctime>
 
-//class Student {
-//	public:
-//		std::string name;
-//		int age;
-//		double gpa;
-//
-//	Student(std::string name, int age, double gpa) {
-//		this->name = name;
-//		this->age = age;
-//		this->gpa = gpa;
-//	}
-//};
-
-class Car {
-public: 
-	std::string make;
-	std::string model;
-	int year;
-	std::string color;
-
-	Car(std::string make, std::string model, int year, std::string color) {
-		this->make = make;
-		this->model = model;
-		this->year = year;
-		this->color = color;
+class Stove {
+private:
+	int temp = 0;
+public:
+	Stove(int temp) {
+		setTemp(temp);
+	}
+	int getTemp() {
+		return temp;
+	}
+	void setTemp(int temp) {
+		if (temp < 0) {
+			this->temp = 0;
+		}
+		else if (temp >= 10) {
+			this->temp = 10;
+		}
+		else {
+			this->temp = temp;
+		}
 	}
 };
 
 int main() {
-	//Student student1("Spongebob", 25, 3.2);
-	//Student student2("Patrick", 40, 1.5);
-	//Student student3("Sandy", 21, 4.0);
+	Stove stove(15);
 
-	//std::cout << student3.name << '\n';
-	//std::cout << student3.age << '\n';
-	//std::cout << student3.gpa << '\n';
+	//stove.setTemp(6);
 
-	Car car1("Chevy", "Corvette", 2022, "blue");
-	Car car2("Ford", "Mustang", 2023, "red");
-	
-	std::cout << car2.make << '\n';
-	std::cout << car2.model << '\n';
-	std::cout << car2.year << '\n';
-	std::cout << car2.color << '\n';
-
+	std::cout << "The temp setting is: " << stove.getTemp();
 	return 0;
 }
