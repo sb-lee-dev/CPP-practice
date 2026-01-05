@@ -3,34 +3,44 @@
 #include <limits>
 #include <ctime>
 
-class Stove {
-private:
-	int temp = 0;
+class Shape {
 public:
-	Stove(int temp) {
-		setTemp(temp);
+	double area;
+	double volume;
+};
+
+class Cube : public Shape {
+public:
+	double side;
+
+	Cube(double side) {
+		this->side = side;
+		this->area = side * side * 6;
+		this->volume = side * side * side;
 	}
-	int getTemp() {
-		return temp;
-	}
-	void setTemp(int temp) {
-		if (temp < 0) {
-			this->temp = 0;
-		}
-		else if (temp >= 10) {
-			this->temp = 10;
-		}
-		else {
-			this->temp = temp;
-		}
+};
+
+class Sphere : public Shape {
+public:
+	double radius;
+
+	Sphere(double radius) {
+		this->radius = radius;
+		this->area = 4 * 3.14159 * radius * radius;
+		this->volume = (4 / 3.0) * 3.14159 * radius * radius * radius;
 	}
 };
 
 int main() {
-	Stove stove(15);
+	Cube cube(10);
+	Sphere sphere(5);
 
-	//stove.setTemp(6);
+	std::cout << "Area: " << cube.area << "cm^2\n";
+	std::cout << "Volume: " << cube.volume << "cm^3\n";
 
-	std::cout << "The temp setting is: " << stove.getTemp();
+	std::cout << "Area: " << sphere.area << "cm^2\n";
+	std::cout << "Volume: " << sphere.volume << "cm^3\n";
+
+
 	return 0;
 }
